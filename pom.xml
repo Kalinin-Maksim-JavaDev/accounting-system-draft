@@ -8,6 +8,7 @@
     <modules>
         <module>model</module>
         <module>application</module>
+        <module>service</module>
     </modules>
 
     <groupId>edu.portfolio</groupId>

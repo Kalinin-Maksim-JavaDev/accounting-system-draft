@@ -1,6 +1,6 @@
 package edu.portfolio.accountingsystem.controller;
 
-import edu.portfolio.accountingsystem.model.About;
+import edu.portfolio.accountingsystem.service.AboutService;
 import edu.portfolio.accountingsystem.view.AboutView;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +15,11 @@ public class AboutController {
     @Autowired
     private ModelMapper modelMapper;
 
+    @Autowired
+    private AboutService aboutService;
+
     @GetMapping(value = "", produces = "application/json")
     public AboutView about() {
-        return modelMapper.map(About.get(), AboutView.class);
+        return modelMapper.map(aboutService.getAbout(), AboutView.class);
     }
 }
