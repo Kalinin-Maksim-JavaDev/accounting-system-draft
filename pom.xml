@@ -9,6 +9,7 @@
         <module>model</module>
         <module>application</module>
         <module>service</module>
+        <module>view</module>
     </modules>
 
     <groupId>edu.portfolio</groupId>
