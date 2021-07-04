@@ -1,5 +1,6 @@
 package edu.portfolio.accountingsystem.service;
 
+import edu.portfolio.accountingsystem.dto.AboutDto;
 import edu.portfolio.accountingsystem.model.About;
 import lombok.Data;
 import org.springframework.stereotype.Service;
@@ -8,7 +9,9 @@ import org.springframework.stereotype.Service;
 @Data
 public class AboutService {
 
-    public About getAbout() {
-        return About.get();
+    public AboutDto getAbout() {
+        return AboutDto.builder()
+                .title(About.get().getTitle())
+                .build();
     }
 }

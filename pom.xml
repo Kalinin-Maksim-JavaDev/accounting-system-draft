@@ -10,6 +10,7 @@
         <module>application</module>
         <module>service</module>
         <module>view</module>
+        <module>dto</module>
     </modules>
 
     <groupId>edu.portfolio</groupId>
