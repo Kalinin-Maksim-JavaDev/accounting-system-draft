@@ -1,6 +1,5 @@
 package edu.portfolio.accountingsystem.controller;
 
-import edu.portfolio.accountingsystem.view.AboutView;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,8 +25,8 @@ class AboutControllerTest {
     @Test
     public void getAbout() throws Exception {
 
-        ResponseEntity<AboutView> response = restTemplate.getForEntity(
-                new URL("http://localhost:" + port + "/about").toString(), AboutView.class);
-        assertEquals("accounting-system", response.getBody().getTitle());
+        ResponseEntity response = restTemplate.getForEntity(
+                new URL("http://localhost:" + port + "/about").toString(), Object.class);
+        assertEquals("{title=accounting-system}", response.getBody().toString());
     }
 }

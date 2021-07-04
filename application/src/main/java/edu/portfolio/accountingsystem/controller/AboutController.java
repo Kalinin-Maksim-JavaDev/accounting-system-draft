@@ -15,7 +15,7 @@ public class AboutController {
     @Autowired
     private ModelMapper modelMapper;
 
-    @GetMapping(value  = "", produces = "application/json")
+    @GetMapping(value = "", produces = "application/json")
     public AboutView about() {
         return modelMapper.map(About.get(), AboutView.class);
     }

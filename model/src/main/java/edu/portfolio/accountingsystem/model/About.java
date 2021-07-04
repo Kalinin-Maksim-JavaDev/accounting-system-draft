@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class About {
-    private String title = "accounting-system";
+    private String title = "accounting-system-";
 
     public static About get() {
         return new About();
