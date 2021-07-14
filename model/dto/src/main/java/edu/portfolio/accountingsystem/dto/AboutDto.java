@@ -1,4 +1,4 @@
-package portfolio.accountingsystem.dto;
+package edu.portfolio.accountingsystem.dto;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
