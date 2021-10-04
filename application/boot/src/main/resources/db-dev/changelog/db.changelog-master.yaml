@@ -1,3 +1,0 @@
-databaseChangeLog:
-  - include:
-      file: db-dev/changelog/init.sql
