@@ -5,6 +5,3 @@ databaseChangeLog:
   - include:
       context: init-insert
       file: db-dev/changelog/init/insert/master.xml
-  - include all:
-      context: feature
-      path: db-dev/changelog/feature
