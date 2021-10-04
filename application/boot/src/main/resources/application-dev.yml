@@ -11,10 +11,10 @@ spring:
   jpa:
     properties:
       defer-datasource-initialization: true
-      hibernate:
-        ddl-auto: validate
-        show_sql: true
-        format_sql: true
+    hibernate:
+      ddl-auto: validate
+      show_sql: true
+      format_sql: true
   liquibase:
     change-log: db-dev/changelog/master.yaml
     contexts: init-insert, init-create
