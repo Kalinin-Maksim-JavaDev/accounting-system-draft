@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+
+    <changeSet id="1" author="tester" context="test1">
+        <sql>
+            CREATE TABLE VERSION
+            (
+                ID    BIGINT not null primary key,
+                DATE  DATE,
+                TITLE VARCHAR(255)
+            );
+            INSERT INTO VERSION (id, date, title)
+            VALUES (0, '2222-01-01', 'accounting-system-test1');
+        </sql>
+    </changeSet>
+    <changeSet id="1" author="tester" context="test2">
+        <sql>
+            CREATE TABLE VERSION
+            (
+                ID    BIGINT not null primary key,
+                DATE  DATE,
+                TITLE VARCHAR(255)
+            );
+            INSERT INTO VERSION (id, date, title)
+            VALUES (0, '2222-01-01', 'accounting-system-test2');
+        </sql>
+    </changeSet>
+    <changeSet id="1" author="tester" context="db-test">
+        <sql>
+            CREATE TABLE VERSION
+            (
+                ID    BIGINT not null primary key,
+                DATE  DATE,
+                TITLE VARCHAR(255)
+            );
+            INSERT INTO VERSION (id, date, title)
+            VALUES (0, '2222-01-01', 'accounting-system-test-db');
+        </sql>
+    </changeSet>
+</databaseChangeLog>
