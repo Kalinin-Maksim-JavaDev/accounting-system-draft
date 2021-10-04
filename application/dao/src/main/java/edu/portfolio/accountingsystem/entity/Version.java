@@ -1,18 +1,17 @@
 package edu.portfolio.accountingsystem.entity;
 
-import lombok.Getter;
-import lombok.Setter;
+import edu.portfolio.accountingsystem.map.Convertible;
+import lombok.Data;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.time.LocalDate;
 
 @Entity
-@Setter
-@Getter
-public class Version {
+@Data
+public class Version implements Convertible {
     @Id
     private Long id;
     private LocalDate date;
-    private String title;
+    public String title;
 }

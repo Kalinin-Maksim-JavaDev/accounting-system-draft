@@ -1,12 +1,10 @@
 package edu.portfolio.accountingsystem.model;
 
+import edu.portfolio.accountingsystem.map.Convertible;
 import lombok.Data;
 
 @Data
-public class About {
-    private String title = "accounting-system-";
+public class About implements Convertible {
 
-    public static About get() {
-        return new About();
-    }
+    public String title;
 }

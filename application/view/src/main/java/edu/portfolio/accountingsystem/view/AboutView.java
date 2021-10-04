@@ -1,10 +1,9 @@
 package edu.portfolio.accountingsystem.view;
 
+import edu.portfolio.accountingsystem.map.Convertible;
 import lombok.Data;
-import lombok.Getter;
 
 @Data
-@Getter
-public class AboutView {
-    String title;
+public class AboutView implements Convertible {
+    public String title;
 }
