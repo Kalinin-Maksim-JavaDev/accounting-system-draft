@@ -12,7 +12,7 @@ spring:
     properties:
       defer-datasource-initialization: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
       show_sql: true
       format_sql: true
   liquibase:

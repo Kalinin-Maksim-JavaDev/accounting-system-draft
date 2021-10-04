@@ -17,6 +17,17 @@
             </modules>
         </profile>
         <profile>
+            <id>update_schema</id>
+            <properties>
+                <spring.profiles.active>update_schema</spring.profiles.active>
+            </properties>
+            <modules>
+                <module>application</module>
+                <module>model</module>
+                <module>codehelp</module>
+            </modules>
+        </profile>
+        <profile>
             <id>IT</id>
             <properties>
                 <spring.profiles.active>it-test</spring.profiles.active>

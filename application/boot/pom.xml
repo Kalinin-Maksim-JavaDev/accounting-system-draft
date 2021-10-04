@@ -36,6 +36,7 @@
                 <configuration>
                     <profiles>
                         <profile>dev</profile>
+                        <profile>update_schema</profile>
                     </profiles>
                     <excludes>
                         <exclude>
