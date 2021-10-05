@@ -8,4 +8,7 @@
     <changeSet id="1" author="developer">
         <sqlFile relativeToChangelogFile="true" path="version.sql"/>
     </changeSet>
+    <changeSet id="2" author="developer">
+        <sqlFile relativeToChangelogFile="true" path="baseOperation.sql"/>
+    </changeSet>
 </databaseChangeLog>
