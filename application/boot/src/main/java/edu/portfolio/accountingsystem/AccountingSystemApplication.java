@@ -17,7 +17,7 @@ public class AccountingSystemApplication {
 
     @Bean
     public Mapper getMapper() {
-        return new Mapper(){
+        return new Mapper() {
 
             ModelMapper mapper = new ModelMapper();
 

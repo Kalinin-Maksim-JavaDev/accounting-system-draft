@@ -20,7 +20,7 @@
         <module>boot</module>
         <module>dao</module>
         <module>view</module>
-        <module>test</module>
+        <module>service</module>
         <module>api</module>
     </modules>
 

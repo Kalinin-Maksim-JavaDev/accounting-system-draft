@@ -11,4 +11,7 @@
     <changeSet id="2" author="developer">
         <sqlFile relativeToChangelogFile="true" path="baseOperation.sql"/>
     </changeSet>
+    <changeSet id="3" author="developer">
+        <sqlFile relativeToChangelogFile="true" path="baseOperationRow.sql"/>
+    </changeSet>
 </databaseChangeLog>
