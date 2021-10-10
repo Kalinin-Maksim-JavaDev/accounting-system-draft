@@ -1,9 +1,10 @@
 package edu.portfolio.accountingsystem.entity.operation;
 
 import lombok.Data;
-import lombok.Generated;
 
-import javax.persistence.*;
+import javax.persistence.Embeddable;
+import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
 import java.io.Serializable;
 
 @Entity
@@ -11,13 +12,12 @@ import java.io.Serializable;
 public class OperationRow {
 
     @EmbeddedId
-    ID key;
+    ID key=new ID();
 
     @Embeddable
     @Data
     private static class ID implements Serializable {
 
         long operationID;
-        long number;
     }
 }

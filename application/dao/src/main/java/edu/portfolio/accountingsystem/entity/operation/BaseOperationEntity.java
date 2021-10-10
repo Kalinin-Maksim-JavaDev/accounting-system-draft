@@ -10,11 +10,10 @@ import java.util.List;
 @Entity(name = "BaseOperation")
 public class BaseOperationEntity implements BaseOperation {
     @Id
-    @GeneratedValue(strategy= GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long id;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "operationID")
+    @OneToMany(mappedBy = "key", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<OperationRow> operationRows;
 
     public LocalDateTime getDate() {
