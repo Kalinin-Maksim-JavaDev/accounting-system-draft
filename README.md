@@ -3,8 +3,6 @@
 - Approaches
   - DDD
   - RestFull
-   
-## Used stack:
 
 - Frameworks
   - spring Boot
