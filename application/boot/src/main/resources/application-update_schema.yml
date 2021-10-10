@@ -5,11 +5,13 @@ spring:
     username: postgres
     password: 111
   jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
     database: postgresql
     hibernate:
       ddl-auto: create-drop
-      show_sql: true
-      format_sql: true
       naming:
         physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
         implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
