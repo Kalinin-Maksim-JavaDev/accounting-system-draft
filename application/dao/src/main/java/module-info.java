@@ -8,5 +8,6 @@ module dao {
     requires java.persistence;
     requires codehelp;
     requires lombok;
+    requires entities;
 
 }
