@@ -29,5 +29,11 @@ public class BaseOperationEntity implements BaseOperation {
 
     public void setOperationOperationRows(List<OperationRow> operationRows) {
         this.operationRows = operationRows;
+        this.operationRows.forEach(this::setThis);
+
+    }
+
+    private void setThis(OperationRow operationRow) {
+        operationRow.setOperation(this);
     }
 }
