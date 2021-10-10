@@ -13,17 +13,11 @@ public class OperationRow {
     @EmbeddedId
     ID key;
 
-    @ManyToOne
-    @MapsId("operationID")
-    @JoinColumn(name = "publisher_id")
-    private BaseOperationEntity operation;
-
     @Embeddable
     @Data
     private static class ID implements Serializable {
 
         long operationID;
-        @Generated
         long number;
     }
 }
