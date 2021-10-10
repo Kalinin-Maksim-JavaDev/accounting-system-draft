@@ -22,3 +22,11 @@
 - Test
   - mockito
   - testcontainers
+
+## TODO
+
+- Technics
+  - functional programing
+   
+- Instruments
+  - kafka-streams
