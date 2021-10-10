@@ -1,21 +1,26 @@
 # Abstract accounting-system (draft-version)
 
+- Approaches
+  - DDD
+  - RestFull
+   
 ## Used stack:
+
 - Frameworks
-  - Spring Boot
-  - Hibernate
+  - spring Boot
+  - hibernate
 
 - BBMS
-  - Postgres
+  - postgres
   - H2
 
 - Complicated management
-  - Maven modules
-  - Java modules - Project Jigsaw
-  - Lambok
+  - maven modules
+  - java modules - Project Jigsaw
+  - lambok
   - liquibase
-  - Profiles
+  - profiles (maven, spring)
 
 - Test
-  - Mockito
-  - Testcontainers
+  - mockito
+  - testcontainers
