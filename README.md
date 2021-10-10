@@ -2,7 +2,7 @@
 
 - Approaches
   - DDD
-  - RestFull
+  - RESTful
 
 - Frameworks
   - spring Boot
