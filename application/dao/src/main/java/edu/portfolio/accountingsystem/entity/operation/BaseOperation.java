@@ -19,10 +19,6 @@ public class BaseOperation implements AbstractOperation {
     @OneToMany(mappedBy = "operation", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Row> rows = new ArrayList<>();
 
-    public LocalDateTime getDate() {
-        return date;
-    }
-
     private LocalDateTime date;
 
     @Override
@@ -60,13 +56,6 @@ public class BaseOperation implements AbstractOperation {
 
             private long number;
 
-            public void setNumber(long number) {
-                this.number = number;
-            }
-        }
-
-        private void setOperation(BaseOperation operation) {
-            this.operation = operation;
         }
     }
 }
