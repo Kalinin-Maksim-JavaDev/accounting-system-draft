@@ -13,7 +13,7 @@ public class BaseOperationEntity implements BaseOperation {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long id;
 
-    @OneToMany(mappedBy = "key", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "operation", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<OperationRow> operationRows;
 
     public LocalDateTime getDate() {
@@ -30,6 +30,11 @@ public class BaseOperationEntity implements BaseOperation {
     public void setOperationOperationRows(List<OperationRow> operationRows) {
         this.operationRows = operationRows;
         this.operationRows.forEach(this::setThis);
+        long i = 0;
+        for (OperationRow e : this.operationRows) {
+            OperationRow.ID key = e.getKey();
+            key.setNumber(i++);
+        }
 
     }
 

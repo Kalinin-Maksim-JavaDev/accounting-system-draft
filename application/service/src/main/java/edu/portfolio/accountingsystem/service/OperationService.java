@@ -16,7 +16,7 @@ public class OperationService {
 
     public void createOperation() {
         BaseOperationEntity baseOperation = new BaseOperationEntity();
-        baseOperation.setOperationOperationRows(Arrays.asList(new OperationRow()));
+        baseOperation.setOperationOperationRows(Arrays.asList(new OperationRow(), new OperationRow()));
         repository.save(baseOperation);
     }
 }

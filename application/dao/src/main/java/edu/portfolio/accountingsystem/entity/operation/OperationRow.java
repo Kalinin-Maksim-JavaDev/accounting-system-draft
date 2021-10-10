@@ -10,7 +10,7 @@ import java.io.Serializable;
 public class OperationRow {
 
     @EmbeddedId
-    ID key=new ID();
+    private ID key = new ID();
 
     @ManyToOne
     @MapsId("operationID")
@@ -18,8 +18,17 @@ public class OperationRow {
 
     @Embeddable
     @Data
-    private static class ID implements Serializable {
+    static class ID implements Serializable {
 
-        long operationID;
+        private long operationID;
+        private long number;
+
+        public void setNumber(long number) {
+            this.number = number;
+        }
+    }
+
+    public void setOperation(BaseOperationEntity operation) {
+        this.operation = operation;
     }
 }
