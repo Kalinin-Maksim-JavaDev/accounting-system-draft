@@ -1,0 +1,45 @@
+version: '2'
+networks:
+  dev-net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.25.0.0/24
+services:
+  app:
+    image: 'accounting-system:draft'
+    build:
+      context: ./db
+      dockerfile: dockerfile
+    container_name: application-server
+    hostname: application-server
+    depends_on:
+      - db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-server:5432/AccountingSystem
+      - SPRING_DATASOURCE_USERNAME=dev
+      - SPRING_DATASOURCE_PASSWORD=111
+    networks:
+      - dev-net
+    ports:
+      - "9001:8080"
+  db:
+    build:
+      context: ./db
+      dockerfile: dockerfile
+    container_name: postgres-server
+    hostname: msdb-server
+    environment:
+      - POSTGRES_USER=dev
+      - POSTGRES_PASSWORD=111
+    ports:
+      - "9002:5432"
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin4_container
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - "9003:80"
+    restart: always
